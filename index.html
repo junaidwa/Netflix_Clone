@@ -7,6 +7,7 @@
     <link rel="icon" type="image/x-icon" href="images/favicon.png" />
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="fontawesome-free-5.12.1-web/css/all.min.css" />
+   
     <script>
       tailwind.config = {
         theme: {
@@ -17,7 +18,7 @@
             md: "768px",
             // => @media (min-width: 768px) { ... }
 
-            lg: "1024px",
+            lg: "1024",
             // => @media (min-width: 1024px) { ... }
 
             xl: "1280px",
@@ -28,7 +29,9 @@
           },
           extends: {
             screens: {
-              md1: { max: "710px", min: "700px " }
+              md1: { max: "710px", min: "700px " },
+              md2: { max: "1024px", min: "768px " },
+
             }
           }
         }
@@ -38,7 +41,7 @@
   <body>
     <!-- Main Section -->
     <section
-      class="w-[100%] h-[100vh] bg-[url('images/netflix-background.jpg')] bg-cover bg-center"
+      class="w-[100%] sm:h-[100vh] h-[75vh] pb-[30px] bg-[url('images/netflix-background.jpg')] bg-cover bg-center"
     >
       <div class="w-[100%] h-[100vh] bg-[rgba(0,0,0,0.6)]">
         <header
@@ -68,15 +71,15 @@
           </div>
         </header>
         <div
-          class="max-w-[1170px] mx-auto sm:py-[200px] py-[50px] mt-[20px] text-center sm:px-[20px] px-[40px]"
+          class="max-w-[1170px] mx-auto  sm:pt-[200px] sm:pb-[200px] pt-[50px] pb-[10px] mt-[20px] text-center sm:px-[20px] px-[30px]"
         >
-          <h1 class="text-[white] text-5xl font-bold">
+          <h1 class="text-[white] sm:text-5xl  text-3xl font-bold">
             Unlimited movies, TV shows, and more
           </h1>
-          <h2 class="text-[white] text-3xl my-[13px] mt-[20px]">
+          <h2 class="text-[white] sm:text-3xl text-2xl my-[13px] mt-[20px]">
             Watch anywhere. Cancel anytime.
           </h2>
-          <p class="text-[white] text-2xl mt-[20px]">
+          <p class="text-[white] sm:text-2xl mt-[20px]">
             Ready to watch? Enter your email to create or restart your
             membership.
           </p>
@@ -109,21 +112,34 @@
     <!-- Tv Section -->
 
     <section
-      class="max-w-[100%]  bg-black border-white border-t-[7px] border-t-[#605d5d] md1:py-[100px] py-[50px] px-auto">
-      <div  class="max-w-[1170px] mx-auto sm:px-[15px] px-[10px]  ">
-        <div class="grid lg:grid-cols-2  grid-cols-1 gap-[80px] ">
-        <div class=" my-auto md1:text-center mx-auto " >
-          <h1 class="sm:text-[50px] text-[40px] font-bold text-white font-bold ">Enjoy on your TV</h1>
-          <p class="text-white sm:text-[25px] text-[20px] pt-[10px]"> Watch on Smart TVs, Playstation, Xbox, Chromecast,<br> Apple TV, Blu-ray players, and more.</p>
-        </div>
-          <figure class="relative  "  >
-            <video class="absolute lg:w-[72%] lg:bottom-[30%] lg:left-[15%] bottom-[23%] left-[13%] z-[1] lg:mx-auto">
-              <source src="images/video-tv.m4v" />
+      class="max-w-[100%] bg-black border-white border-t-[7px] border-t-[#605d5d] md1:py-[100px] py-[50px] px-auto"
+    >
+      <div class="max-w-[1170px] mx-auto sm:px-[15px] px-[10px]">
+        <div class="grid lg:grid-cols-2 grid-cols-1 gap-[80px]">
+          <div class="my-auto  ">
+            <h1
+              class="lg:text-[50px] text-[35px] font-bold text-white font-bold lg:text-start  text-center"
+            >
+              Enjoy on your TV
+            </h1>
+            <p class="text-white sm:text-[25px] text-[20px] pt-[10px] lg:text-start  text-center">
+              Watch on Smart TVs, Playstation, Xbox, Chromecast,<br>
+              Apple TV, Blu-ray players, and more.
+            </p>
+          </div>
+          <figure class="relative">
+            <video
+              class="absolute w-[80%] bottom-[19%] left-[13%]   z-[1] lg:mx-auto video  border-2" controls autoplay loop
+ >
+              <source src="images/video-tv.m4v" type="video/mp4"  />
             </video>
-            <img src="images/tv pic.png" alt="Tv Pic"  class=" relative z-[2] lg:mx-auto "/>
+            <img
+              src="images/tv pic.png"
+              alt="Tv Pic"
+              class="relative z-[2] lg:mx-auto"
+            />
           </figure>
         </div>
-      
       </div>
     </section>
   </body>
